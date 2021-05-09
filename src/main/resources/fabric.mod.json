@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "motherlode-spelunky",
+  "version": "${version}",
+
+  "name": "Motherlode Spelunky",
+  "description": "[...]",
+  "authors": [
+    "Team Motherlode"
+  ],
+  "contact": {
+    "sources": "https://github.com/TeamMotherlode/motherlode-spelunky",
+    "issues": "https://github.com/TeamMotherlode/motherlode-spelunky/issues"
+  },
+
+  "license": "GNU Lesser General Public License Version 2.1 or later",
+  "icon": "assets/motherlode-spelunky/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "motherlode:init": [
+      "motherlode.spelunky.MotherlodeSpelunky"
+    ],
+    "client": [
+      "motherlode.spelunky.MotherlodeSpelunkyClient"
+    ]
+  },
+  "mixins": [
+    "motherlode-spelunky.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "*",
+    "motherlode-api": "^1.1.0"
+  },
+  "suggests": {
+  },
+  "custom": {
+    "modmenu": {
+      "parent": "motherlode"
+    }
+  }
+}
