@@ -12,9 +12,7 @@ jobs:
       matrix:
         # Use these Java versions
         java: [
-          1.8,  # Minimum supported by Minecraft
-          11,   # Current Java LTS
-          15    # Latest version
+          16    # Latest version
         ]
         # and run on both Linux and Windows
         os: [ubuntu-20.04, windows-latest]
@@ -33,8 +31,11 @@ jobs:
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew assemble
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: capture build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '11' }} # Only upload artifacts built from LTS Java on one OS
+        if: ${{ runner.os == 'Linux' && matrix.java == '16' }} # Only upload artifacts built from latest Java on one OS
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts
