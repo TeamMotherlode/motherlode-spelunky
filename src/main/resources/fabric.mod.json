@@ -33,7 +33,7 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "*",
-    "motherlode-api": "^2.0.0",
+    "motherlode-api": "^3.0.0",
     "java": ">=16"
   },
   "suggests": {
