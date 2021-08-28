@@ -7,8 +7,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import motherlode.base.api.Motherlode;
 import motherlode.base.api.Registerable;
-import motherlode.base.api.assets.CommonAssets;
-import motherlode.base.api.assets.CommonData;
+import motherlode.base.api.resource.CommonAssets;
+import motherlode.base.api.resource.CommonData;
 
 public final class MotherlodeSpelunkyBlocks {
     private static final Item.Settings BLOCK_ITEM_SETTINGS = new Item.Settings().group(ItemGroup.MATERIALS);
